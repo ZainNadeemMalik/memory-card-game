@@ -1,0 +1,116 @@
+/* css reset */
+
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.header {
+  border-bottom: 1px white solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-container {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #00FF00, #FF4500, #00BFFF);/* Gradient from green to orange to blue */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+.title-description {
+font-size: 1.25rem;
+}
+
+.current-score {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.current-score > * {
+  font-weight: bold;
+}
+
+.best-score {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.best-score > * {
+  font-weight: bold;
+}
+
+.target-score {
+  font-size: 1.25rem;
+  color: #D8B0FF;
+}
+
+.main {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 1rem;
+}
+
+.card {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: .5rem;
+  transition: box-shadow 0.3s ease;
+  display: grid;
+  place-items: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); 
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
